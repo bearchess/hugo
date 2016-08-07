@@ -766,6 +766,13 @@ e.g.: `{{ i18n "translation_id" }}`
 
 
 ## URLs
+### absLangURL, relLangURL
+These are similar to the `absURL` and `relURL` relatives below, but will add the correct language prefix when the site is configured with more than one language.
+
+So for a site  `baseURL` set to `http://mysite.com/hugo/` and the current language is `en`:
+
+* `{{ "blog/" | absLangURL }}` → "http://mysite.com/hugo/en/blog/"
+* `{{ "blog/" | relLangURL }}` → "/hugo/en/blog/"
 
 ### absURL, relURL
 
